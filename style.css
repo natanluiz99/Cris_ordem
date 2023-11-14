@@ -1,3 +1,14 @@
+#screen {
+	position: relative;
+	border: 30px solid transparent;
+	border-image-source: url(/img/bezel_gray.png);
+	border-image-slice: 30 fill;
+	border-image-outset: 0;
+	overflow: hidden;
+}
+
+
+
 @keyframes blink {
     0% {opacity: 1.0;}
     50% {opacity: 0.5;}
@@ -38,19 +49,20 @@ body {
 }
 
 .wrapper {
+    border: 20;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
   }
+
   .box1 {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
-    
   }
   
-  
+
 
 .nav-button {
             
@@ -161,9 +173,10 @@ nav input[type="text"] {
     border-radius: 15px;
     margin-left: 15px;
 }
-.grid-wrapper {
+
+//.grid-wrapper {
     height: 500px;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(3, 75px);
     grid-template-rows: repeat(3, 75px);
     grid-auto-rows: 75px;
@@ -172,8 +185,11 @@ nav input[type="text"] {
     padding: 10px;
     border: 1px solid black;
     border-radius: 15px;
+    position: right;
     background-color: #0f0d1d;
   }
+
+
 
   .a {
     grid-row: 1 / 2;
