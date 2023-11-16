@@ -1,184 +1,55 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
 
-#screen {
-	position: relative;
-	border: 30px solid transparent;
-	border-image-source: url(/img/bezel_gray.png);
-	border-image-slice: 30 fill;
-	border-image-outset: 0;
-	overflow: hidden;
-}
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium">
+  <title>C.R.I.S.</title>
 
+</head>
 
+<body>
 
-@keyframes blink {
-    0% {opacity: 1.0;}
-    50% {opacity: 0.5;}
-    100% {opacity: 1.0;}
-}
-body {
-    background-color: rgba(41,67,121,255);
-    color: white;
-    font-family: Arial, sans-serif;
-}
+	<div class="container">
+		<span class="main">Binary Converter</span><br>
+		<textarea autofocus class="inputBinary" id="inputBinary" onKeyUp="convertBinary()"></textarea>
+		<textarea class="outputBinary" id="outputBinary" readonly></textarea>
+		<div class="about">Made by <strong>Omar</strong></div>
+	  </div>
 
+  <div id="monitor">
+    <!-- the rounded edge near the glass -->
+    <div id="bezel">
+      <!-- the overlay and horizontal pattern -->
+      <div id="crt" class="off" onClick="handleClick(event)">
+        <!-- slowly moving scanline -->
+        <div class="scanline"></div>
+        <!-- the input and output -->
+        <div class="terminal"></div>
+      </div>
+    </div>
+  </div>
 
-@keyframes textShadow {
-    0% {
-        text-shadow: 5px 0 1px rgba(0,30,255,0.5), -6.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    15% {
-        text-shadow: 9.40218538552878136px 0 1px rgba(0,30,255,0.5), -8.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    30% {
-        text-shadow: 13.7015590085143956px 0 1px rgba(0,30,255,0.5), -11.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    45% {
-        text-shadow: 15.231056963361899px 0 1px rgba(0,30,255,0.5), -12.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    60% {
-        text-shadow: 13.202193051050636px 0 1px rgba(0,30,255,0.5), -11.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    75% {
-        text-shadow: 9.8948491305757957px 0 1px rgba(0,30,255,0.5), -8.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    90% {
-        text-shadow: 5.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-    100% {
-        text-shadow: 3.6208764473832513px 0 1px rgba(0,30,255,0.5), -0.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-    }
-}
+  <nav>
 
+    <img src="https://cdn.discordapp.com/attachments/1091416272908066816/1173105667985395732/crislogo.jpg?ex=6562beca&is=655049ca&hm=44540003813efb0356fb229e3c15aed4c77d211b0c4ab3afa9cd181c6eae80d8&" alt="C.R.I.S.">
+    <ul>
+      <li><button class="ctrb nav-button">CASOS</button></li>
+      <li><button class="ctrb nav-button">REGISTROS</button></li>
+      <li><button class="ctrb nav-button">ANOMALIAS</button></li>
+      <li><button class="ctrb nav-button">CONFIG</button></li>
+      <li><button class="ctrb nav-button">DADOS</button></li>
 
+    </ul>
+    <input type="text" placeholder="Pesquise...">
+  </nav>
 
-.diva {
-    inline-size: 320px;
-    block-size: 50px;
-    padding: 10px;
-    border: 5px solid rgb(102, 0, 0);
-    margin: 0;
-    position: relative;
-  }
-  .box1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-  
+  <div id="diva"></div>
 
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
-.nav-button {
-            
-            animation-name: blink;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            font-family: 'Oxanium', serif;
-            color: #bed4f7;
-            border-radius: 20px;
-            font-size: 48px;
-            font-weight: bold;
-            background-color: #0f0d1d;
-        }
+</body>
 
-@keyframes scanline {
-    0% {
-        inset-block-end: 100%;
-    }
-    80% {
-        inset-block-end: 100%;
-    }
-    100% {
-        inset-block-end: 0%;
-    }
-}
-
-.scanline {
-    inline-size: 100%;
-    block-size: 100px;
-    z-index: 8;
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 0.2) 10%,
-        rgba(0, 0, 0, 0.1) 100%
-    );
-    opacity: 0.1;
-    position: absolute;
-    inset-block-end: 100%;
-    animation: scanline 5s linear infinite;
-}
-#crt:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    inset-block-end: 0;
-    inset-inline-end: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(18, 16, 16, 0) 50%,
-        rgba(0, 0, 0, 0.25) 50%
-    );
-    background-size: 100% 6px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.ctrb {
-    animation: textShadow 1.6s infinite;
-}
-
-nav {
-    background-color: #0f0d1d;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 20px;
-}
-nav img {
-    block-size: 100px;
-    margin-inline-end: 10px;
-    border-radius: 20px;
-}
-nav ul {
-  animation: textShadow 1.6s infinite;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-family: 'Oxanium', serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #bed4f7;
-  border-radius: 20px;
-}
-nav bd { 
-    border: 5px;
-}
-nav li {
-    margin-inline-end: 45px;
-    color: #bed4f7;
-}
-nav input[type="text"] {
-    border-radius: 15px;
-    border: 5px;
-    padding: 15px;
-    inline-size: 100px;
-}
-
-.container {
-    border: 1px solid black;
-    padding: 30px;
-    
-  }
-
-
-
-
-
-
- 
+</html>
