@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Oxanium">
-    <title>C.R.I.S.</title>
-	
-	
-</head>
-<body>
-  <div id="wrapper"></div>
-	<div id="monitor">
-    <!-- the rounded edge near the glass -->
-    <div id="bezel">
-        <!-- the overlay and horizontal pattern -->
-        <div id="crt" class="off" onClick="handleClick(event)"> 
-            <!-- slowly moving scanline -->
-            <div class="scanline"></div>
-            <!-- the input and output -->
-            <div class="terminal"></div>
-        </div>
-    </div>
-</div>
 
-	
-	<nav>
-		
-		<img src="https://cdn.discordapp.com/attachments/1091416272908066816/1173105667985395732/crislogo.jpg?ex=6562beca&is=655049ca&hm=44540003813efb0356fb229e3c15aed4c77d211b0c4ab3afa9cd181c6eae80d8&" alt="C.R.I.S.">
-		<ul>
-			<li><button class="ctrb nav-button">CASOS</button></li>
-			<li><button class="ctrb nav-button">REGISTROS</button></li>
-			<li><button class="ctrb nav-button">ANOMALIAS</button></li>
-			<li><button class="ctrb nav-button">CONFIG</button></li>
-			<li><button class="ctrb nav-button">DADOS</button></li>
-			
-		</ul>
-		<input type="text" placeholder="Pesquise...">
-	</nav>
-	
-	<div class="grid-wrapper">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium">
+  <title>C.R.I.S.</title>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<span class="main">Binary Converter</span><br>
+		<textarea autofocus class="inputBinary" id="inputBinary" onKeyUp="convertBinary()"></textarea>
+		<textarea class="outputBinary" id="outputBinary" readonly></textarea>
+		<div class="about">Made by <strong>Omar</strong></div>
 	  </div>
 
-  <div class="render"></div>
+  <div id="monitor">
+    <!-- the rounded edge near the glass -->
+    <div id="bezel">
+      <!-- the overlay and horizontal pattern -->
+      <div id="crt" class="off" onClick="handleClick(event)">
+        <!-- slowly moving scanline -->
+        <div class="scanline"></div>
+        <!-- the input and output -->
+        <div class="terminal"></div>
+      </div>
+    </div>
+  </div>
 
-  
-	<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-		
-	
-		
-	
+  <nav>
+
+    <img src="https://cdn.discordapp.com/attachments/1091416272908066816/1173105667985395732/crislogo.jpg?ex=6562beca&is=655049ca&hm=44540003813efb0356fb229e3c15aed4c77d211b0c4ab3afa9cd181c6eae80d8&" alt="C.R.I.S.">
+    <ul>
+      <li><button class="ctrb nav-button">CASOS</button></li>
+      <li><button class="ctrb nav-button">REGISTROS</button></li>
+      <li><button class="ctrb nav-button">ANOMALIAS</button></li>
+      <li><button class="ctrb nav-button">CONFIG</button></li>
+      <li><button class="ctrb nav-button">DADOS</button></li>
+
+    </ul>
+    <input type="text" placeholder="Pesquise...">
+  </nav>
+
+  <div id="diva"></div>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
 </body>
+
 </html>
