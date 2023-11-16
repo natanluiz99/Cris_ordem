@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium">
   <title>C.R.I.S.</title>
@@ -11,13 +11,6 @@
 </head>
 
 <body>
-
-	<div class="container">
-		<span class="main">Binary Converter</span><br>
-		<textarea autofocus class="inputBinary" id="inputBinary" onKeyUp="convertBinary()"></textarea>
-		<textarea class="outputBinary" id="outputBinary" readonly></textarea>
-		<div class="about">Made by <strong>Omar</strong></div>
-	  </div>
 
   <div id="monitor">
     <!-- the rounded edge near the glass -->
@@ -46,9 +39,12 @@
     <input type="text" placeholder="Pesquise...">
   </nav>
 
-  <div id="diva"></div>
+  <div class="containerTabela">
+    <div id="diva"></div>
+  </div>
 
   <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script src="file.js"></script>
 
 </body>
 
