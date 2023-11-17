@@ -6,8 +6,21 @@ new gridjs.Grid({
 
 }).render(document.getElementById("diva"));
 
+function setLetter(letter) {
+  document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + letter;
+}
 
+var html = '';
+var c;
+for (var i = 65; 90 >= i; i++) {// A-65, Z-90
+  c = String.fromCharCode(i);
+  html += '<button onclick="setLetter(\'' + c + '\');">' + c + '</button>';
+}
+document.getElementById('box').innerHTML = html;
 
+var setLetter = function(x) {
+  document.getElementById('name').innerHTML += x;
+};
 
 
 
