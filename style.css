@@ -58,20 +58,56 @@ body {
 
 }
 
-.containerTabela {
+.containerTabela2 {
     /* display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center; */
-    /* height: auto; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* block-size: auto; */
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    position: flex;
+    border-radius: 20px;
+    left: 300px;
+    transform: translate(30%, 30px);
     /* transform: translate(-50%, -50%); */
-    width: 80%;
-    background-color: red;
+    width: 250px;
+    height: 200px;
+    background-color:#0f0d1d;
 }
+
+.card-container{
+    
+    inline-size: 1500px;
+    gap:5px;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    
+}
+
+.card {
+    background-color: aquamarine;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-block-end: 10px;
+}
+
+.containerTabela {
+  
+    top: 90%;
+    left: 300px;
+    transform: translate(369%, -53%);
+    width: 610px;
+    height: 400px;
+    background-color: #0f0d1d;
+    border-radius: 20px;
+}
+
+
 
 .diva {
     width: 100px;
