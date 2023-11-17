@@ -85,7 +85,7 @@ body {
     inline-size: 70px; 
     block-size: auto;
     border-radius: 15px;
-    
+    transform: rotate(360deg);
     padding: 0;
 }
 
@@ -114,12 +114,11 @@ body {
 }
 
 .containerTabela3 {
-    flex-wrap: wrap;
     inset-block-start: 90%;
     inset-inline-start: 300px;
-    transform: translate(145%, -158%);
+    transform: translate(145%, -115%);
     inline-size: 610px;
-    block-size: 400px;
+    block-size: 550px;
     background-color: #0f0d1d;
     border-radius: 20px;
 }
