@@ -1,3 +1,7 @@
+
+
+//--------------------------------------------------------------------------------//
+
 const buttonsContainer = document.getElementById('buttonsContainer');
   const nameElement = document.getElementById('name');
 
@@ -53,12 +57,7 @@ const buttonsContainer = document.getElementById('buttonsContainer');
     nameElement.textContent = letter;
   }
 
-  function setLetter(letter) {
-    // Your code logic here
-    nameElement.textContent = letter;
-  }
-
-
+// ----------------------------------------------------------------------------------//
 
 new gridjs.Grid({
   columns: ["Nome", "Status", "Missão delegada"],
@@ -70,8 +69,8 @@ function setLetter(letter) {
   document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + letter;
 }
 
-var html = '';
-var c;
+
+
 for (var i = 65; 90 >= i; i++) {// A-65, Z-90
   c = String.fromCharCode(i);
   html += '<button onclick="setLetter(\'' + c + '\');">' + c + '</button>';
@@ -82,7 +81,7 @@ var setLetter = function(x) {
   document.getElementById('name').innerHTML += x;
 };
 
-
+//---------------------------------------------------------------------------//
 
 function convertBinary() {
   var output = document.getElementById("outputBinary");
@@ -102,3 +101,7 @@ function convertBinary() {
     output.value += s;
   }
 }
+
+//-------------------------------------------------------------------------//
+
+
