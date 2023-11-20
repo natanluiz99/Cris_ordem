@@ -9,6 +9,10 @@
 	overflow: hidden;
 }
 
+#main {
+    width: 100%;
+}
+
 
 
 @keyframes blink {
@@ -66,23 +70,7 @@ body {
     font-size: large;
 }
 
-.containerTabela2 {
-    
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    position: flex;
-    border-radius: 20px;
-    inset-inline-start: 300px;
-    transform: translate(700%, 220%);
-    
-    inline-size: 250px;
-    block-size: 200px;
-    background-color:#0f0d1d;
-}
 
 
 
@@ -105,7 +93,12 @@ body {
     
 }
 
-
+#c {
+    /* Adjust these styles based on your requirements */
+    width: 400px;
+    height: 300px;
+    display: block;
+  }
 
 .containerTabela {
     
@@ -113,22 +106,47 @@ body {
     inset-inline-start: 300px;
     transform: translate(246.9%, -53%);
     inline-size: 610px;
-    block-size: 400px;
+    
     background-color: #0f0d1d;
     border-radius: 20px;
 }
 
+.containerTabela2 {
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+    border-radius: 20px;
+    inset-inline-start: 300px;
+    transform: translate(650%, 330%);
+    inline-size: 250px;
+    
+    background-color:#0f0d1d;
+}
 .containerTabela3 {
     inset-block-start: 90%;
     inset-inline-start: 300px;
     transform: translate(145%, -115%);
     inline-size: 610px;
-    block-size: 550px;
+    
     background-color: #0f0d1d;
     border-radius: 20px;
 }
 
-
+.containerTabela4 {
+    
+    inset-block-start: 90%;
+    inset-inline-start: 300px;
+    transform: translate(30%, 55%);
+    inline-size: 610px;
+    block-size: 200px;
+    background-color: #0f0d1d;
+    border-radius: 20px;
+}
 
 
   .box1 {
