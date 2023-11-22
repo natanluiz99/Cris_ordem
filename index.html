@@ -2,31 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link
-      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"/>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Oxanium"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium"/>
     <title>C.R.I.S.</title>
   </head>
 
+
   <body>
-    <div id="monitor">
-      <!-- the rounded edge near the glass -->
-      <div id="bezel">
-        <!-- the overlay and horizontal pattern -->
-        <div id="crt" class="off">
-          <!-- slowly moving scanline -->
-          <div class="scanline"></div>
-          <!-- the input and output -->
-          <div class="terminal"></div>
-        </div>
-      </div>
-    </div>
 
     <nav>
       <img
@@ -34,47 +17,30 @@
         alt="C.R.I.S."
       />
       <ul>
-        <li><button class="nav-button">CASOS</button></li>
-        <li><button class="nav-button">REGISTROS</button></li>
-        <li><button class="nav-button">ANOMALIAS</button></li>
-        <li><button class="nav-button">CONFIG</button></li>
-        <li><button class="nav-button">DADOS</button></li>
+        <li><button class="ctrb nav-button" >CASOS</button></li>
+        <li><button class="ctrb nav-button" >REGISTROS</button></li>
+        <li><button class="ctrb nav-button" >ANOMALIAS</button></li>
+        <li><button class="ctrb nav-button" >CONFIG</button></li>
+        <li><button class="ctrb nav-button" >DADOS</button></li>
       </ul>
       <input type="text" placeholder="Pesquise..." />
     </nav>
 
-    <main id="main">
-      <div class="containerTabela2">
-        <div class="justify">Codificador Binário</div>
-        <span class="main"></span><br />
-        <textarea
-          autofocus
-          class="inputBinary"
-          id="inputBinary"
-          onKeyUp="convertBinary()"
-        ></textarea>
-        <textarea class="outputBinary" id="outputBinary" readonly></textarea>
+    <div id="bezel">
+      <div id="crt" class="off">
+        <div class="scanline"></div>
       </div>
-  
-      <div class="containerTabela">
-        <h1>Agentes em campo</h1>
-        <div id="diva"></div>
-      </div>
-  
-      <div id="containerTabela4">
-        <h1>C.R.I.S.</h1>
-        <canvas id="c"></canvas>
-      </div>
-  
-      <div class="containerTabela3">
-        <h1>Tradutor Paranormal</h1>
-        <div id="buttonsContainer"></div>
-        <div id="name"></div>
-      </div>
+    </div>
+
+    <main id="row" class="content">
+       <div></div>
+       <div class="diva"></div>
+       <div></div> 
+
     </main>
 
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-
+    <script src="main.js" type="module"></script>
     <script src="file.js"></script>
     <script type="importmap">
       {
@@ -83,6 +49,6 @@
         }
       }
     </script>
-    <script src="main.js" type="module"></script>
+    
   </body>
 </html>
