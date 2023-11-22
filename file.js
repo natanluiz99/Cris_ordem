@@ -60,16 +60,22 @@ const buttonsContainer = document.getElementById('buttonsContainer');
 // ----------------------------------------------------------------------------------//
 
 new gridjs.Grid({
-  columns: ["Nome", "Status", "Missão delegada"],
-  data: [["João Guilherme", "Vivo", "Mantiqueira"], ["Augusto souza", "Vivo", "Mantiqueira"], ["Victória pantoja", "Vivo", "Mantiqueira"]],
+  columns: ["Name", "Email", "Phone Number"],
+  data: [
+    ["John", "john@example.com", "(353) 01 222 3333"],
+    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
+    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
+    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
+    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"]
+  ]
+}).render(document.getElementById("wrapper"));
 
-}).render(document.getElementById("diva"));
+
+// ----------------------------------------------------------------------------------//
 
 function setLetter(letter) {
   document.getElementById('name').innerHTML = document.getElementById('name').innerHTML + letter;
 }
-
-
 
 for (var i = 65; 90 >= i; i++) {// A-65, Z-90
   c = String.fromCharCode(i);
