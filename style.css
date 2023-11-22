@@ -95,6 +95,7 @@ nav input[type="text"] {
     inline-size: 100px;
 }
 
+
 .content {
     width: 100vw;
     height: 100vh;
@@ -102,10 +103,17 @@ nav input[type="text"] {
     display: flex;
   }
 
+.div53 {
+    width: 33vw;
+    height: 33vh;
+}
+  
 #row {
+    display: flex;
     flex-direction: row;
     background-color: #0f0d1d;
 }
+
 #screen {
 	position: relative;
 	border: 30px solid transparent;
