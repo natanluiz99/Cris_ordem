@@ -59,18 +59,16 @@ const buttonsContainer = document.getElementById('buttonsContainer');
 
 // ----------------------------------------------------------------------------------//
 
-new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+const grid = new gridjs.Grid({
+  columns: ['Name', 'Age', 'Country'],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"]
-  ]
-}).render(document.getElementById("wrapper"));
+    ['John Doe', 25, 'USA'],
+    ['Jane Smith', 30, 'Canada'],
+    ['Bob Johnson', 45, 'UK'],
+  ],
+});
 
-
+grid.render(document.getElementById('grid'));
 // ----------------------------------------------------------------------------------//
 
 function setLetter(letter) {
@@ -212,4 +210,3 @@ function convertBinary() {
 }
 
 //-------------------------------------------------------------------------//
-
