@@ -95,11 +95,28 @@ nav input[type="text"] {
     inline-size: 100px;
 }
 
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 6px;
+    z-index: 2;
+    pointer-events: none;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
+    background-color: hsl(248, 38%, 8%, 0.8);
+    
   }
 
 .content {
@@ -110,10 +127,7 @@ nav input[type="text"] {
     flex-direction: column; /* Change to column to stack elements vertically */
 }
 
-.div53 {
-    width: 33vw;
-    height: 33vh;
-}
+
   
 #row {
     display: flex;
@@ -121,34 +135,22 @@ nav input[type="text"] {
     background-color: #0f0d1d;
 }
 
-#screen {
-	position: relative;
-	border: 30px solid transparent;
-	border-image-source: url(/img/bezel_gray.png);
-	border-image-slice: fill;
-	border-image-outset: 0;
-	overflow: hidden;
-}
+
 
 #main {
     width: 100%;
 }
 
 #c {
-    
     width: 400px;
     height: 300px;
     display: block;
   }
-
 #crt:before {
     content: " ";
     display: block;
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    inset-block-end: 0;
-    inset-inline-end: 0;
+    inset: 0;
     background: linear-gradient(
         to bottom,
         rgba(18, 16, 16, 0) 50%,
@@ -176,8 +178,6 @@ nav input[type="text"] {
 
 
 
-
-
 .button2 {
     inline-size: 70px; 
     block-size: auto;
@@ -197,56 +197,6 @@ nav input[type="text"] {
     
 }
 
-
-
-.containerTabela {
-    
-    inset-block-start: 90%;
-    inset-inline-start: 300px;
-    transform: translate(246.9%, -53%);
-    inline-size: 610px;
-    
-    background-color: #0f0d1d;
-    border-radius: 20px;
-}
-
-.containerTabela2 {
-    
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    
-    border-radius: 20px;
-    inset-inline-start: 300px;
-    transform: translate(650%, 330%);
-    inline-size: 250px;
-    
-    background-color:#0f0d1d;
-}
-
-.containerTabela3 {
-    inset-block-start: 90%;
-    inset-inline-start: 300px;
-    transform: translate(145%, -115%);
-    inline-size: 610px;
-    
-    background-color: #0f0d1d;
-    border-radius: 20px;
-}
-
-.containerTabela4 {
-    
-    inset-block-start: 90%;
-    inset-inline-start: 300px;
-    transform: translate(30%, 55%);
-    inline-size: 610px;
-    block-size: 200px;
-    background-color: #0f0d1d;
-    border-radius: 20px;
-}
 
   .box1 {
     grid-column-start: 1;
@@ -278,7 +228,7 @@ nav input[type="text"] {
         rgba(255, 255, 255, 0.2) 10%,
         rgba(0, 0, 0, 0.1) 100%
     );
-    opacity: 0.1;
+    opacity: 0.3;
     position: absolute;
     inset-block-end: 100%;
     animation: scanline 5s linear infinite;
@@ -290,8 +240,8 @@ nav input[type="text"] {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    grid-template-rows: auto; /* Auto-sized rows for the first two columns */
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: auto;
     grid-gap: 15px;
     border-radius: 15px;
     margin-inline-start: 15px;
