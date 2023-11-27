@@ -95,13 +95,20 @@ nav input[type="text"] {
     inline-size: 100px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
 
 .content {
     width: 100vw;
     height: 100vh;
     border: 1px solid #0f0d1d;
     display: flex;
-  }
+    flex-direction: column; /* Change to column to stack elements vertically */
+}
 
 .div53 {
     width: 33vw;
@@ -283,7 +290,8 @@ nav input[type="text"] {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: auto; /* Auto-sized rows for the first two columns */
     grid-gap: 15px;
     border-radius: 15px;
     margin-inline-start: 15px;
