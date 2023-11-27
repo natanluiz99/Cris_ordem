@@ -27,42 +27,35 @@
       <input type="text" placeholder="Pesquise..." />
     </nav>
     
-
-    <div id="bezel">
-      <div id="crt" class="off">
-        <div class="scanline"></div>
-      </div>
+    <div id="crt" class="off">
+      <div class="scanline"></div>
     </div>
 
-    
-
-    
-
     <div class="grid-container">
-      <div>column 1</div>
-      <div>Column 2</div>
+      <div id="wrapper" style="width: 800px;" >
+        <!-- Place the Grid.js grid here -->
+        <div id="grid" style="width: 100%;"></div>
+      </div>
+      <div style="width: 800px;">Column 2</div>
       <div class="third-column">
-        <div class="translator">
+        <div class="translator" style="width: 800px;">
           <h2>Binary Translator</h2>
           <textarea id="inputText" placeholder="Enter text"></textarea>
             <button onclick="textToBinary()">Translate to Binary</button>
             <button onclick="binaryToText()">Translate to Text</button>
             <div id="output"></div>
+        </div>    
+        <div style="width: 800px;">
+          <h1>Tradutor Paranormal</h1>
+          <div id="buttonsContainer"></div>
+          <div id="name"></div>
         </div>
-        <div>Div 2</div>
         <div>Div 3</div>
       </div>
       
       
     </div>
 
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://threejs.org/build/three.module.js"
-        }
-      }
-    </script>
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
     <script src="file.js"></script>
     <script src="main.js"></script>
