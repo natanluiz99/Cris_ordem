@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxanium"/>
@@ -25,6 +26,7 @@
       </ul>
       <input type="text" placeholder="Pesquise..." />
     </nav>
+    
 
     <div id="bezel">
       <div id="crt" class="off">
@@ -32,13 +34,27 @@
       </div>
     </div>
 
-    <main>
-      <div id="row" class="content">
-        <div></div>
-        <div id="wrapper">AAAAAAAAA</div>
-        <div></div> 
+    
+
+    
+
+    <div class="grid-container">
+      <div>column 1</div>
+      <div>Column 2</div>
+      <div class="third-column">
+        <div class="translator">
+          <h2>Binary Translator</h2>
+          <textarea id="inputText" placeholder="Enter text"></textarea>
+            <button onclick="textToBinary()">Translate to Binary</button>
+            <button onclick="binaryToText()">Translate to Text</button>
+            <div id="output"></div>
+        </div>
+        <div>Div 2</div>
+        <div>Div 3</div>
       </div>
-    </main>
+      
+      
+    </div>
 
     <script type="importmap">
       {
@@ -48,8 +64,9 @@
       }
     </script>
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <script src="main.js"></script>
     <script src="file.js"></script>
+    <script src="main.js"></script>
+   
     
     
   </body>
