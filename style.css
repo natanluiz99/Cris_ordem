@@ -47,7 +47,7 @@ body {
     background-color: rgba(41,67,121,255);
     color: white;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -105,12 +105,19 @@ body::before {
         rgba(18, 16, 16, 0) 50%,
         rgba(0, 0, 0, 0.25) 50%
     );
-    background-size: 100% 6px;
+    background-size: 100% 3px;
     z-index: 2;
     pointer-events: none;
 }
 
+textarea{
+    width: 800px;
+    height: 200px;
+    color: #000;
+}
+
 .grid-container {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: auto auto 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -246,3 +253,6 @@ body::before {
     border-radius: 15px;
     margin-inline-start: 15px;
 }
+
+
+
