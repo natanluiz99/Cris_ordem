@@ -60,9 +60,9 @@
           <div id="regions_div" style="width: 700px; height: 500px;"></div>
         </div>
         <div class="col-md-12">
-            <h4 style="color:#00689D">Selecione uma de nossas <br><b style="color:#00689D">130 unidades</b>, e solicite um</h3>
-            <p><b style="background-color:#00689D;color:white;font-size:1.5em">Orçamento</b></p><br>
-            <select id="seletorCombo" style="width: 50%;">
+            <h4 style="color:#00689D">Escolha um estado <br><b style="color:#00689D"></b>e visualize os casos do respectivo</h3>
+            <p><b style="background-color:#00689D;color:white;font-size:1.5em">Estados</b></p><br>
+            <select id="seletorCombo" style="width: 50%; color: black;">
             <option>Selecione um Estado</option>
               <option value="1">Acre</option>
               <option value="2">Alagoas</option>
@@ -118,8 +118,8 @@
         <div class="translator" style="width: 800px;">
           <h2>Binary Translator</h2>
           <textarea id="inputText" placeholder="Enter text"></textarea>
-            <button onclick="textToBinary()">Translate to Binary</button>
-            <button onclick="binaryToText()">Translate to Text</button>
+            <button style="color: black;" onclick="textToBinary()">Translate to Binary</button>
+            <button style="color: black;" onclick="binaryToText()">Translate to Text</button>
             <div id="output"></div>
         </div>    
         <div style="width: 800px;">
@@ -250,43 +250,44 @@
   function drawRegionsMap() {
 
     var data = google.visualization.arrayToDataTable([
-      ['Country'],
-      ['Brazil'],
-      ['Acre'],
-      ['Alagoas'],
-      ['Amapa'],
-      ['Amazonas'],
-      ['Bahia'],
-      ['Ceara'],
-      ['Distrito Federal'],
-      ['Espirito Santo'],
-      ['Goias'],
-      ['Maranhao'],
-      ['Mato Grosso'],
-      ['Mato Grosso do Sul'],
-      ['Minas Gerais'],
-      ['Para'],
-      ['Paraiba'],
-      ['Parana'],
-      ['Pernambuco'],
-      ['Piaui'],
-      ['Rio de Janeiro'],
-      ['Rio Grande do Norte'],
-      ['Rio Grande do Sul'],
-      ['Rondonia'],
-      ['Roraima'],
-      ['Santa Catarina'],
-      ['Sao Paulo'],
-      ['Sergipe'],
-      ['Tocantins']
+      ['Country', 'Cases'],
+      ['Brazil',null],
+      ['Acre',3],
+      ['Alagoas',3],
+      ['Amapa',4],
+      ['Amazonas',6],
+      ['Bahia',7],
+      ['Ceara',5],
+      ['Distrito Federal',9],
+      ['Espirito Santo',8],
+      ['Goias',6],
+      ['Maranhao',5],
+      ['Mato Grosso',4],
+      ['Mato Grosso do Sul',4],
+      ['Minas Gerais',7],
+      ['Para',6],
+      ['Paraiba',5],
+      ['Parana',6],
+      ['Pernambuco',7],
+      ['Piaui',4],
+      ['Rio de Janeiro',11],
+      ['Rio Grande do Norte',3],
+      ['Rio Grande do Sul',4],
+      ['Rondonia',1],
+      ['Roraima',2],
+      ['Santa Catarina',7],
+      ['Sao Paulo',13],
+      ['Sergipe',5],
+      ['Tocantins',4]
     ]);
 
     var options = {
        region: 'BR',
        resolution: 'provinces',
        datalessRegionColor: 'white',
-       defaultColor: '#F1F2F3',
+       colorAxis: {colors: ['green', 'yellow', 'red']},
        enableRegionInteractivity: true
+       
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
